@@ -1,0 +1,19 @@
+{
+  "name": "port-scanner",
+  "version": "1.0.0",
+  "description": "A port scanner CLI tool",
+  "main": "ccscan.js",
+  "bin": {
+    "ccscan": "./ccscan.js"
+  },
+  "scripts": {
+    "start": "node ccscan.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "commander": "^15.0.0"
+  }
+}

@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', monospace;
+  background: #1a1a2e;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.title {
+  font-size: 72px;
+  letter-spacing: 8px;
+  background: linear-gradient(180deg, #00f5d4, #7b2ff7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.menu-btn {
+  font-family: 'Courier New', monospace;
+  font-size: 18px;
+  padding: 12px 32px;
+  background: #16213e;
+  color: #00f5d4;
+  border: 2px solid #00f5d4;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 200px;
+}
+
+.menu-btn:hover {
+  background: #00f5d4;
+  color: #1a1a2e;
+}
+
+.quit-btn {
+  margin-top: 16px;
+  border-color: #f72585;
+  color: #f72585;
+}
+
+.quit-btn:hover {
+  background: #f72585;
+  color: #1a1a2e;
+}
+
+/* Help Screen */
+.help-content {
+  max-width: 500px;
+  text-align: left;
+}
+
+.help-content h3 {
+  color: #00f5d4;
+  margin: 16px 0 8px;
+}
+
+.help-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.help-content li {
+  padding: 4px 0;
+}
+
+kbd {
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 3px;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+
+/* Scores */
+.scores-list {
+  text-align: left;
+  font-size: 20px;
+  line-height: 2;
+  min-width: 200px;
+}
+
+/* Game Layout */
+.game-layout {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.board-container {
+  border: 4px solid #333;
+  background: #0f0f1a;
+}
+
+#game-canvas {
+  display: block;
+}
+
+.side-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 140px;
+}
+
+.info-box {
+  background: #16213e;
+  border: 2px solid #333;
+  padding: 12px;
+  text-align: center;
+}
+
+.info-box h3 {
+  color: #888;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.info-box p {
+  font-size: 24px;
+  color: #00f5d4;
+}
+
+#next-canvas {
+  display: block;
+  margin: 8px auto 0;
+  background: #0f0f1a;
+}
+
+/* Game Over */
+#gameover-screen p {
+  font-size: 24px;
+}
+
+#gameover-screen span {
+  color: #00f5d4;
+}

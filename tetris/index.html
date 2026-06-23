@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tetris</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Welcome Screen -->
+  <div id="welcome-screen" class="screen">
+    <h1 class="title">TETRIS</h1>
+    <div class="menu">
+      <button id="btn-play" class="menu-btn">Play</button>
+      <button id="btn-help" class="menu-btn">How to Play</button>
+      <button id="btn-scores" class="menu-btn">High Scores</button>
+    </div>
+  </div>
+
+  <!-- Help Screen -->
+  <div id="help-screen" class="screen hidden">
+    <h2>How to Play</h2>
+    <div class="help-content">
+      <div class="controls">
+        <h3>Controls</h3>
+        <ul>
+          <li><kbd>←</kbd> / <kbd>→</kbd> Move left / right</li>
+          <li><kbd>↓</kbd> Soft drop</li>
+          <li><kbd>↑</kbd> Rotate clockwise</li>
+          <li><kbd>Z</kbd> Rotate counter-clockwise</li>
+          <li><kbd>Space</kbd> Hard drop</li>
+          <li><kbd>P</kbd> Pause</li>
+        </ul>
+      </div>
+      <div class="gameplay">
+        <h3>Gameplay</h3>
+        <p>Fit falling pieces together to complete horizontal lines. Completed lines disappear and earn points. The game ends when pieces stack to the top.</p>
+        <h3>Scoring</h3>
+        <ul>
+          <li>1 line: 100 points</li>
+          <li>2 lines: 300 points</li>
+          <li>3 lines: 500 points</li>
+          <li>4 lines (Tetris!): 800 points</li>
+        </ul>
+      </div>
+    </div>
+    <button id="btn-back-help" class="menu-btn">Back</button>
+  </div>
+
+  <!-- High Scores Screen -->
+  <div id="scores-screen" class="screen hidden">
+    <h2>High Scores</h2>
+    <ol id="scores-list" class="scores-list"></ol>
+    <button id="btn-back-scores" class="menu-btn">Back</button>
+  </div>
+
+  <!-- Game Screen -->
+  <div id="game-screen" class="screen hidden">
+    <div class="game-layout">
+      <div class="board-container">
+        <canvas id="game-canvas" width="300" height="600"></canvas>
+      </div>
+      <div class="side-panel">
+        <div class="info-box">
+          <h3>Score</h3>
+          <p id="score-display">0</p>
+        </div>
+        <div class="info-box">
+          <h3>Level</h3>
+          <p id="level-display">1</p>
+        </div>
+        <div class="info-box">
+          <h3>Lines</h3>
+          <p id="lines-display">0</p>
+        </div>
+        <div class="info-box">
+          <h3>Next</h3>
+          <canvas id="next-canvas" width="120" height="120"></canvas>
+        </div>
+        <button id="btn-quit" class="menu-btn quit-btn">Quit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Game Over Screen -->
+  <div id="gameover-screen" class="screen hidden">
+    <h2>Game Over</h2>
+    <p>Score: <span id="final-score">0</span></p>
+    <p>Level: <span id="final-level">1</span></p>
+    <button id="btn-restart" class="menu-btn">Play Again</button>
+    <button id="btn-menu" class="menu-btn">Main Menu</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

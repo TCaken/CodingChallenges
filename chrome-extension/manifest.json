@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Coding Challenges New Tab",
+  "version": "1.0",
+  "description": "Custom new tab page with time, date, and GitHub PRs",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["activeTab"],
+  "host_permissions": ["https://api.github.com/*"],
+  "icons": {
+    "48": "icon.png",
+    "128": "icon.png"
+  }
+}
